@@ -32,10 +32,10 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Input 
             type="text" 
-            placeholder="Pesquisar..." 
+            placeholder="O que você precisa?" 
             className="w-48"
           />
-          <Button>Buscar</Button>
+          <Button className="px-6 py-3 text-white" style={{ backgroundColor: "#033D6F" }}>Buscar</Button>
         </div>
 
         {/* MOBILE MENU ICON */}
