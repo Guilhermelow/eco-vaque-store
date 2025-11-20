@@ -1,13 +1,8 @@
-<<<<<<< HEAD:src/app/page.jsx
-import { Button } from "@/components/ui/button"
-import "./globals.css"
-=======
 "use client";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import "../globals.css";
->>>>>>> e641046 (carousel):src/app/dashboard/page.jsx
+import "./globals.css";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -28,9 +23,11 @@ export default function Dashboard() {
     "/imgs/img6.jpg",
   ];
 
-   return (
+  return (
     <div className="w-full px-20">
-      <h1 className="text-3xl font-bold mb-6" style={{ color: "#033D6F" }}>Ofertas Relâmpagos</h1>
+      <h1 className="text-3xl font-bold mb-6" style={{ color: "#033D6F" }}>
+        Ofertas Relâmpagos
+      </h1>
 
       <Carousel className="w-full">
         <CarouselContent className="flex">
@@ -60,7 +57,8 @@ export default function Dashboard() {
 
       <div className="flex justify-center mt-6">
         <Button className="px-6 py-3 text-white" style={{ backgroundColor: "#033D6F" }}>
-          Ver Todos os Produtos</Button>
+          Ver Todos os Produtos
+        </Button>
       </div>
     </div>
   );
