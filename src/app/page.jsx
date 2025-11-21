@@ -1,9 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import "./globals.css";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -23,8 +23,20 @@ export default function Dashboard() {
     "/imgs/img6.jpg",
   ];
 
+  const categorias = [
+    { nome: "Botas", img: "/imgs/img1.jpg" },
+    { nome: "Chapéus", img: "/imgs/img2.jpg" },
+    { nome: "Calças", img: "/imgs/img3.jpg" },
+    { nome: "Rações", img: "/imgs/img4.jpg" },
+    { nome: "Peitorais", img: "/imgs/img5.jpg" },
+    { nome: "Medicamentos", img: "/imgs/img6.jpg" },
+  ];
+
+  const [selecionado, setSelecionado] = useState(null);
+
   return (
-    <div className="w-full px-20">
+    <div className="w-full max-w-screen-xl mx-auto px-2">
+      {/* OFERTAS */}
       <h1 className="text-3xl font-bold mb-6" style={{ color: "#033D6F" }}>
         Ofertas Relâmpagos
       </h1>
@@ -56,9 +68,47 @@ export default function Dashboard() {
       </Carousel>
 
       <div className="flex justify-center mt-6">
-        <Button className="px-6 py-3 text-white" style={{ backgroundColor: "#033D6F" }}>
+        <Button
+          className="px-6 py-3 text-white cursor-pointer"
+          style={{ backgroundColor: "#033D6F" }}
+        >
           Ver Todos os Produtos
         </Button>
+      </div>
+
+      {/* CATEGORIAS */}
+      <div className="mt-20">
+        <span className="text-sm font-medium text-[#033D6F]">Categorias</span>
+        <h2 className="text-2xl font-bold mt-1 mb-6">Navegar por categorias</h2>
+
+        <div className="flex gap-6 items-center">
+          {categorias.map((cat, index) => {
+            const ativo = selecionado === index;
+
+            return (
+              <Card
+                key={index}
+                onClick={() => setSelecionado(index)}
+                className={`w-48 h-40 border rounded-xl shadow-sm cursor-pointer transition-all
+                ${ativo ? "bg-[#033D6F] text-white" : "bg-white"}
+              `}
+              >
+                <CardContent className="flex flex-col items-center justify-center p-4">
+                  <Image
+                    src={cat.img}
+                    alt={cat.nome}
+                    width={60}
+                    height={60}
+                    className={`object-contain transition-all 
+                    ${ativo ? "invert brightness-200" : ""}
+                  `}
+                  />
+                  <p className="mt-2 font-medium text-sm">{cat.nome}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
