@@ -28,7 +28,7 @@ export default function Header() {
           <Link href="/" className="hover:text-blue-700 transition">Home</Link>
           <Link href="/contato" className="hover:text-blue-700 transition">Contato</Link>
           <Link href="/sobre" className="hover:text-blue-700 transition">Sobre nós</Link>
-          <Link href="/signup" className="hover:text-blue-700 transition">Sign Up</Link>
+          <Link href="/login" className="hover:text-blue-700 transition">Sign Up</Link>
         </nav>
 
         {/* Search + Icons */}

@@ -1,17 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function SignUpPage() {
   return (
-    <div className="w-full min-h-screen flex flex-col">
-      <div className="flex flex-1 justify-between items-center px-10 py-14">
-        {/* IMAGEM DO LADO ESQUERDO */}
+    <div className="w-full min-h-screen flex items-center justify-center px-10">
+      <div className="flex w-full max-w-6xl items-center justify-between gap-10">
+
+        {/* IMAGEM À ESQUERDA */}
         <div className="w-1/2 flex justify-center">
           <Image
-            src="login.svg" // coloque sua imagem na pasta /public
+            src="/login.svg"
             width={500}
             height={500}
             alt="Imagem criar conta"
@@ -21,19 +23,20 @@ export default function SignUpPage() {
 
         {/* FORMULÁRIO À DIREITA */}
         <div className="w-1/2 max-w-md">
-          <h1 className="text-3xl font-semibold mb-3">Login</h1>
-          <p className="text-sm mb-8 text-gray-500">
-            Insira seus dados abaixo
-          </p>
+          <h1 className="text-4xl font-semibold mb-3">Login</h1>
+          <p className="text-sm mb-8 text-gray-500">Insira seus dados abaixo</p>
 
           <form className="space-y-4">
             <Input placeholder="E-mail ou número de telefone" />
             <Input type="password" placeholder="Senha" />
 
-            <Button className="w-full mt-3">Fazer Login</Button>
+            <Button className="w-full mt-3 cursor-pointer">Fazer Login</Button>
 
             {/* Botão Google */}
-            <Button variant="outline" className="w-full flex gap-2">
+            <Button
+              variant="outline"
+              className="w-full flex items-center justify-center gap-2 cursor-pointer"
+            >
               <Image
                 src="https://www.svgrepo.com/show/475656/google-color.svg"
                 width={20}
@@ -44,17 +47,19 @@ export default function SignUpPage() {
             </Button>
           </form>
 
+          {/* LINK NAVEGANDO PARA A PÁGINA DE CADASTRO */}
           <p className="text-sm text-center mt-6">
             Ainda não possui uma conta?{" "}
-            <a href="/login" className="text-blue-600 underline">
+            <Link href="/cadastro" className="text-blue-600 underline">
               Cadastre-se
-            </a>
+            </Link>
           </p>
-           <p className="text-sm text-center mt-6">
-            Esqueceu a senha?{" "}</p>
+
+          <p className="text-sm text-center mt-2 text-blue-600 cursor-pointer underline">
+            Esqueceu a senha?
+          </p>
         </div>
       </div>
     </div>
   );
 }
-
