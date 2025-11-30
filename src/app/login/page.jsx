@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export default function SignUpPage() {
+export default function PageLogin() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center px-10">
       <div className="flex w-full max-w-6xl items-center justify-between gap-10">
@@ -32,7 +32,7 @@ export default function SignUpPage() {
 
             <Button className="w-full mt-3 cursor-pointer">Fazer Login</Button>
 
-            {/* Botão Google */}
+            {/* BOTÃO GOOGLE */}
             <Button
               variant="outline"
               className="w-full flex items-center justify-center gap-2 cursor-pointer"

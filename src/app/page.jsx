@@ -13,7 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export default function Dashboard() {
+export default function PageAgroVaqueStore() {
   const imagens = [
     "/imgs/bota.png",
     "/imgs/img2.jpg",
@@ -46,7 +46,7 @@ export default function Dashboard() {
   return (
     <div className="w-full max-w-screen-xl mx-auto px-2">
 
-      {/* OFERTAS */}
+      {/* OFERTAS RELAMPAGOS*/}
       <h1 className="text-3xl font-bold mb-6" style={{ color: "#033D6F" }}>
         Ofertas Relâmpagos
       </h1>
@@ -121,7 +121,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* MAIS VENDIDOS — SEGUNDO CARROSSEL */}
+      {/* MAIS VENDIDOS */}
       <div className="mt-20">
         <h1 className="text-3xl font-bold mb-6" style={{ color: "#033D6F" }}>
           Produtos Mais Vendidos

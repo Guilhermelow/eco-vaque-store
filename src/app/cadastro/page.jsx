@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export default function SignUpPage() {
+export default function PageCadastro() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center px-10">
       <div className="flex w-full max-w-6xl items-center justify-between gap-10">
@@ -12,10 +12,10 @@ export default function SignUpPage() {
         {/* IMAGEM À ESQUERDA */}
         <div className="w-1/2 flex justify-center">
           <Image
-            src="/login.svg" // deixe dentro de /public
+            src="/login.svg"
             width={500}
             height={500}
-            alt="Imagem criar conta"
+            alt="Criar conta"
             className="rounded-lg object-contain"
           />
         </div>
@@ -36,7 +36,7 @@ export default function SignUpPage() {
               Criar uma conta
             </Button>
 
-            {/* Botão Google */}
+            {/* BOTÃO GOOGLE */}
             <Button
               variant="outline"
               className="w-full flex items-center justify-center gap-2 cursor-pointer"
